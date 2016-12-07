@@ -1,0 +1,61 @@
+<div id="panel">
+    <div id="addMenuGroup">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="text" ng-model="restaurantDetailMenu.newMenuGroup.menuGroupTitle">
+                    </th>
+                    <th>
+                        <button class="button add-menu-group" ng-click="restaurantDetailMenu.addMenuGroup(restaurantDetailMenu.newMenuGroup, restaurantDetailMenu.restaurantId)">Add Menu Group <i class="icons fa fa-plus"></i></button>
+                    </th>
+                </tr>
+            <thead>
+        </table>
+    </div>
+    <div class="panel-block">
+        <div ng-repeat="menuGroup in restaurantDetailMenu.menu">
+        <div>
+            <h1 class="header menu-group-header">
+            {{menuGroup.menuGroupTitle}}
+                <button class="button is-warning delete-menu-group-btn" ng-click="restaurantDetailMenu.deleteMenuGroup(menuGroup)">Delete {{menuGroup.menuGroupTitle}}<i class="icons fa fa-minus-circle"></i></button>
+            </h1>
+        </div>
+            <table class="table menu-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in menuGroup.menuItems">
+                        <td>{{item.name}}</td>
+                        <td>{{item.description}}</td>
+                        <td>{{item.price | currency}}</td>
+        </div>
+        <td>
+            <button class="button delete-menu-item-btn" ng-click="restaurantDetailMenu.deleteMenuItem(item)">Delete <i class="icons fa fa-trash-o"></i></button>
+        </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" ng-model="menuGroup.newMenuItem.name">
+            </td>
+            <td>
+                <input type="text" ng-model="menuGroup.newMenuItem.description">
+            </td>
+            <td>
+                <input type="text" ng-model="menuGroup.newMenuItem.price">
+            </td>
+            <td>
+                <button class="button add-menu-item-btn" ng-click="restaurantDetailMenu.addMenuItem(menuGroup.newMenuItem, menuGroup.menuGroupId)">Add <i class="icons fa fa-plus"></i></button>
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
+</div>

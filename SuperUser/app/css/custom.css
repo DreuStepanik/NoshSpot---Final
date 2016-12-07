@@ -1,0 +1,229 @@
+/****************************************************
+				Body Default
+****************************************************/
+
+body {
+	font-family: Raleway;
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   background-color: #f1f5f0;
+ }
+
+ main {
+   flex: 1 0 auto;
+ }
+
+/****************************************************
+				NavBar Default
+****************************************************/
+.nav{
+	background-color: rgba(90, 111, 93, .8);
+	margin-bottom: 15px;
+	font-family: Raleway;
+}
+
+#navName {
+	color: #fff;
+	font-size: 2.6em;
+	font-family: lobster;
+}
+
+.nav a {
+	font-size: 1.4em;
+	color: #fff;
+}
+
+
+/****************************************************
+				Footer Default
+****************************************************/
+.footer {
+	font-family: Raleway;
+	height: 40px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, .6);
+	z-index: 1;
+	box-shadow: 10px 0px 10px black;
+	margin-top: 4%;
+}
+
+.footer p {
+	color: #000;
+}
+
+/****************************************************
+				Input Field Default
+****************************************************/
+.input:active, .textarea:active, .input:focus, .textarea:focus, .input.is-active, .is-active.textarea {
+ 	border-color: #6a3b3b;
+ 	outline: none;
+}
+
+.tabs li.is-active a {
+	color: green;
+	font-size: 1.2em;
+}
+
+input {
+	box-shadow: 0px 4px 4px #ccc; 
+}
+
+/****************************************************
+					Login Page
+
+
+/****************************************************
+			Customers/ Restaurants List Page
+****************************************************/
+#restaurantDetailBody,
+#restaurant-list-body,
+#customer-list-body{
+	background-size: 100% 100%;
+	width: 100%;
+    top: 0px;
+    left: 0px;
+    position: relative;
+}
+
+#restaurants-table,
+#customers-table{
+	width: 98%;
+	margin-left: 1%;
+	margin-top: 20px;
+}
+
+#restaurants-table th,
+#customers-table th{
+	font-size: 1.4em;
+	padding-bottom: 15px;
+}
+
+#restaurants-table td,
+#customers-table td{
+	font-size: 1.2em;
+	padding: 5px; 
+	border-bottom: 1px solid #294949;
+}
+
+.restaurant-menu-panel,
+.customer-detail-panel2,
+.customer-detail-panel,
+.restaurant-detail-panel2,
+.restaurant-detail-panel,
+.list-panel {
+	background-color: #fff;
+	box-shadow: 0px 5px 10px #ccc;
+}
+
+.box {
+	box-shadow: 0px 12px 13px #ccc;
+	margin-top: 4%;
+}
+
+.customer-detail-panel .panel-heading,
+.restaurant-detail-panel2 .panel-heading,
+.restaurant-detail-panel .panel-heading,
+.list-panel .panel-heading {
+	background-color: #294949;
+	color: #fff;
+}
+ 
+.customer-detail-panel .panel-heading p,
+.restaurant-detail-panel2 .panel-heading p,
+.restaurant-detail-panel .panel-heading p,
+.list-panel .panel-heading p {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.delete-menu-item-btn,
+.delete-restaurant {
+	background-color: red;
+	color: #fff;
+}
+
+.add-menu-item-btn,
+.add-menu-group,
+#restaurantAddButton {
+	float: right;
+	color: #fff;
+	background-color: #697f7f;
+	border: none;
+}
+
+.button:hover, 
+.button:focus, 
+.button.is-active {
+	color: #fff;
+	box-shadow: 3px 3px 5px #ccc;
+}
+
+/****************************************************
+			Restaurant Detail Page
+****************************************************/
+#restaurantDetailDescription{
+	width: 100%;
+}
+
+#delete-restaurant {
+	margin-bottom: 10px;
+}
+
+#restaurantPanelBody{
+	width: 98%;
+	margin-left: 1%;
+}
+
+#restaurantPanelBody label {
+	font-size: 1.4em;
+	padding-bottom: 10px;
+}
+
+#restaurantDetailTopColumns {
+	padding-top: 10px;
+}
+
+#delete-user,
+#restaurantDetailSaveBtn {
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+/****************************************************
+			Customer Detail Page
+****************************************************/
+
+
+
+/****************************************************
+			Restaurant Detail Page - Menu
+****************************************************/
+#addMenuGroup {
+	margin: 10px 10px auto 10px;
+	text-align: right;
+}
+
+.menu-group-header {
+	font-size: 1.3em;
+	font-weight: bold;
+	padding-left: 10px;
+	color: #294949;
+}
+
+.menu-table td {
+	max-width: 15px;
+}
+a.nav-item.nav-link {
+	visibility: visible;
+	display: block;
+	color: #fff;
+	font-size: 1.7em;
+	padding-top: 15px;
+}
+
+.delete-menu-group-btn {
+	float: right;
+}
+

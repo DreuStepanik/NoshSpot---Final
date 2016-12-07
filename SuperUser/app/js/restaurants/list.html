@@ -1,0 +1,47 @@
+<!-- ng-controller = 'restaurantList' -->
+<!-- ng-model = 'allRestaurants' will hold the list of restaurants -->
+<!-- ng-model = 'removeRestaurant' function will remove restaurant -->
+<div id="restaurant-list-body">
+    <div class="container">
+    <div class="box">
+        <div class="panel list-panel">
+            <div class="panel-heading">
+                <p>Restaurants:
+                	<button class="button" id="restaurantAddButton" ui-sref="restaurants.detail.tabs.menu">Add Restaurant <i class="icons fa fa-plus"></i></button>
+                </p>
+            </div>
+            <div class="panel-block">
+                <div class="columns">
+                    <table class="column" id="restaurants-table">
+                        <thead>
+                            <tr>
+                                <th>Restaurant: </th>
+                                <th>Address: </th>
+                                <th>Telephone: </th>
+                                <th>Email: </th>
+                                <th>Website: </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="restaurant in restaurantList.allRestaurants">
+                                <td>{{restaurant.name}}</td>
+								<td>{{restaurant.address}}, {{restaurant.zipCode}}</td>
+								<td>{{restaurant.telephone}}</td>
+								<td>{{restaurant.email}}</td>
+								<td>{{restaurant.webSite}}</td>
+								<!-- <td>{{restaurant.description}}</td> -->
+								<td>
+									<button class="button edit-restaurant" ui-sref="restaurants.detail.tabs.menu({restaurantId: restaurant.restaurantId})">View <i class="icons fa fa-search"></i></button>
+								</td>
+								<!-- <td>
+									<button class="button delete-restaurant" ng-click="restaurantList.removeRestaurant(restaurant)">Delete  <i class="icons fa fa-trash-o"></i></button>
+								</td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

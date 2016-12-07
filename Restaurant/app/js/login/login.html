@@ -1,0 +1,48 @@
+<section id="restaurantLoginBody">
+    <!-- Hero header: will stick at the top -->
+    <!-- Hero content: will be in the middle -->
+    <div class="modal">
+        <div class="container">
+            <div class="lowerHeader">
+                <header>
+                    <h1 id="text1">Your Restaurant Deliveries</h1>
+                    <h2 id="text2">MADE EASY.</h2>
+                    <button class="button is-medium modal-login-button">
+                		<label for="modalTrigger"> Login<i class="icons fa fa-cutlery" aria-hidden="true"></i></label>
+            		</button>
+                </header>
+            </div>
+        </div>
+        <div>
+            <input class="modal-input" id="modalTrigger" type="checkbox">
+            <div class="modal-overlay">
+                <div class="modal-wrap">
+                    <label class="modal-trigger-label" for="modalTrigger">&#10006;</label>
+                    <div>
+                        <div class="box">
+                            <form ng-submit="login.loginRestaurant()">
+                                <div class="control">
+                                    <!-- a replacement for oauth -->
+                                    <label>Welcome back!</label>
+                                    <div class="select is-fullwidth">
+                                        <select ng-model="login.selectedRestaurant" ng-options="restaurant.restaurantId as restaurant.name for restaurant in login.restaurants">
+                                            <option value="" disabled>Select your restaurant...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <p class="control has-icon">
+                                    <!-- <label>Password</label> -->
+                                    <input class="input" type="password" placeholder="Password" ng-model="login.loginInfo.password">
+                                    <i class="fa fa-lock"></i>
+                                </p>
+                                <p class="control">
+                                    <button type="submit" class="button is-success">Login</button>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

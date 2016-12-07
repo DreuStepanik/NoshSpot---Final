@@ -1,0 +1,59 @@
+<div>
+    <div id="addMenuGroup">
+        <!-- Remember to add menu group btn -->
+    </div>
+    <div class="column is-3">
+        <input class="input" type="text" placeholder="New Group"ng-model="restaurantMenu.newMenuGroup.menuGroupTitle" />
+        <button class="button add-menu-item-btn" ng-click="restaurantMenu.addMenuGroup(restaurantMenu.newMenuGroup, restaurantMenu.restaurantId)">Add Menu Group <i class="icons fa fa-plus"></i></button>
+    </div>
+    </th>
+    </th>
+    <div class="panel-block">
+        <div ng-repeat='menuGroup in restaurantMenu.menu'>
+            <!-- Make sure that the H1 tag with menu group title is centered and clearly visible -->
+            <h1 class="header menu-group-header">
+                {{menuGroup.menuGroupTitle}}
+                    <button class="button remove-mg-btn is-danger is-small" ng-click="restaurantMenu.deleteMenuGroup(menuGroup)">Remove {{menuGroup.menuGroupTitle}}<i class="icons fa fa-minus-circle"></i></button>
+            </h1>
+                
+            <table class="table menu-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                	<div class="container">
+	                    <tr ng-repeat='item in menuGroup.menuItems'>
+	                        <td>{{item.name}}</td>
+	                        <td>{{item.description}}</td>
+	                        <td>{{item.price | currency}}</td>
+	                        <td>
+                                <div class="container">
+    	                            <button class="button is-danger delete-menu-item-btn is-small" ng-click="restaurantMenu.deleteMenuItem(item)">Delete Item<i class="icons fa fa-trash-o"></i></button>
+                                </div>
+	                        </td>
+	                    </tr>
+                    	<tr>
+	                        <td>
+	                            <input class="input" type="text" placeholder="New Item" ng-model="menuGroup.newMenuItem.name" />
+	                        </td>
+	                        <td>
+	                            <input class="input" type="text" placeholder="Description" ng-model="menuGroup.newMenuItem.description" />
+	                        </td>
+	                        <td>
+	                            <input class="input" type="text" placeholder="$0.00" ng-model="menuGroup.newMenuItem.price" />
+	                        </td>
+	                        <td>
+	                            <button class="button add-menu-item-btn is-small" ng-click="restaurantMenu.addMenuItem(menuGroup.newMenuItem, menuGroup.menuGroupId)">Add Item <i class="icons fa fa-plus"></i></button>
+	                        </td>
+                    	</tr>
+                    </div>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

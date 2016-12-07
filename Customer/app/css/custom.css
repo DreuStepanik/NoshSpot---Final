@@ -1,0 +1,409 @@
+/*====================================
+  		Modal Window styles
+=====================================*/
+.modal2,
+.modal {
+  background: transparent;
+  display: inline;
+  position: relative;
+}
+
+.modal-login-button {
+	margin-top: 2%;
+	box-shadow: 0px 5px 8px #000;
+	background-color: #697f7f;
+	color: #fff;
+	border: none;
+	width: 20%;
+}
+
+.modal-login-button2 {
+	margin-top: .2%;
+	box-shadow: 0px 5px 8px #000;
+	background-color: #687d68;
+	color: #fff;
+	border: none;
+	width: 20%;
+}
+
+@media (min-width: 40px) {
+  .modal2,
+  .modal {
+    padding: 1.5em;
+  }
+}
+
+.modal-overlay2,
+.modal-overlay {
+  background: rgba(0, 0, 0, .7);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-shadow: none;
+  top: 0;
+  z-index: 600;
+}
+
+.modal-wrap {
+  padding: 1em 0;
+  position: relative;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 90%;
+}
+
+.modal-wrap2{
+	margin-top: 5%;
+	position: relative;
+	padding: 1em 0;
+	max-width: 500px;
+	width: 90%;
+
+}
+
+@media (min-width: 40px) {
+  .modal-wrap2,
+  .modal-wrap {
+    padding: 1.75em;
+  }
+}
+@media (min-height: 40px) {
+  .modal-wrap2,
+  .modal-wrap {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -80%);
+  }
+}
+
+.modal-trigger-label2,
+.modal-trigger-label {
+  background: red;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  height: 1.4em;
+  line-height: 1.4;
+  position: absolute;
+  right: .5em;
+  top: .5em;
+  width: 1.4em;
+}
+
+.modal-wrap2 h2,
+.modal-wrap h2 {
+  color: #FFD300;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+.modal-wrap2 p,
+.modal-wrap p {
+  color: #FFD300;
+  text-align: justify;
+}
+.modal-input2:focus ~ .modal-trigger-label2,
+.modal-input:focus ~ .modal-trigger-label {
+  transform: scale(0.97);
+}
+
+/*====================================
+  		Modal action styles
+=====================================*/
+.modal-input2,
+.modal-input {
+  position: absolute;
+  top: -1000px;
+}
+
+.modal-overlay2,
+.modal-overlay {
+  opacity: 0;
+  z-index: -100;
+  transform: scale(0.5);
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.modal-input2:checked ~ .modal-overlay2,
+.modal-input:checked ~ .modal-overlay {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+}
+
+
+
+
+/****************************************************
+				NavBar && Footer Default
+****************************************************/
+.nav{
+	background-color: rgba(90, 111, 93, .8);
+	margin-bottom: 4%;
+	font-family: Raleway;
+}
+
+#navName {
+	color: #fff;
+	font-size: 2.6em;
+	font-family: lobster;
+}
+
+.nav a {
+	font-size: 1.4em;
+	color: #fff;
+}
+
+
+/****************************************************
+				Body Default
+****************************************************/
+body {
+	font-family: Raleway;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	background-color: #f1f5f0;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.icons {
+	padding-left: 5px;
+	margin-top: 3px;
+}
+/****************************************************
+				Footer Default
+****************************************************/
+.footer {
+	font-family: Raleway;
+	height: 40px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, .6);
+	z-index: 1;
+	box-shadow: 10px 0px 10px black;
+	margin-top: 4%;
+}
+
+.footer p {
+	color: #000;
+}
+
+
+/*====================================
+  		Customer Login Page
+=====================================*/
+.lowerHeader {
+	margin-top: 12%;
+}
+
+#text1 {
+	font-size: 2.5em;
+	font-style: italic;
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 0px 5px 8px #000;
+}
+
+#text2 {
+	font-size: 8em;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 0px 5px 8px #000;
+}
+
+#hero1 {
+	margin-top: -4%;
+	background-image: url('../img/mainFoodBackground.jpg');
+	background-size: 100% 100%;
+}
+
+#hero2 {
+	
+	padding-top: -100px;
+	background-color: #fff;
+	height: 500px;
+}
+
+#hero3 {
+	background-image: url('../img/foodImage.jpg');
+	background-size: 100%;
+}
+
+#hero4 {
+	background-color: #fff;
+	margin-bottom: -55px;
+	height: 400px;
+}
+
+.box {
+	box-shadow: 0px 12px 13px #ccc;
+	background-color: #fbfbfb;
+
+}
+
+.box img {
+	size: 800px;
+}
+
+.p-tag-left {
+	color: rgb(90, 111, 93);
+	font-size: 2.2em;
+	margin-top: -65px;
+	margin-bottom: 10px;
+}
+
+.p-tag {
+	color: rgb(90, 111, 93);
+	font-size: 2.2em;
+	text-align: center;
+}
+
+.card {
+	box-shadow: 0px 12px 13px #ccc;
+}
+
+.card p {
+	color:  rgb(90, 111, 93);
+}
+
+#headerText1 {
+	font-size: 9em;
+	font-family: lobster;
+	color: #fff;
+	text-shadow: 0px 7px 9px #000;
+}
+
+#headerText2 {
+	font-size: 2.3em;
+	color: #fff;
+	text-shadow: 0px 5px 8px #000;
+}
+
+.sm-text {
+	color: #fff;
+	margin-top: 4px;
+	text-shadow: 0px 5px 2px #000;
+}
+
+/*====================================
+  		Restaurant Page Login Page
+=====================================*/
+
+.menu-group-header {
+	font-size: 1.3em;
+	font-weight: bold;
+	padding-left: 10px;
+	color: #294949;
+	padding-top: 10px;
+}
+
+.panel-heading {
+	background-color: #294949;
+}
+.panel-heading p {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #fff;
+}
+
+.add-to-cart-btn {
+	color: #fff;
+	background-color: #697f7f;
+	border: none;
+}
+
+.menu-table td{
+	max-width: 15px;
+}
+
+.checkout-box {
+	background-color: rgb(127,191,127);
+	margin-bottom: 20px;
+}
+
+.panel-block {
+	background-color: #fff;
+	box-shadow: 0px 5px 10px #ccc;
+}
+
+.reviews {
+	margin-top: 4%;
+}
+
+.write-reviews,
+.cart {
+	margin-bottom: 2%;
+}
+
+.total-amt {
+	color: rgb(127,191,127);
+	font-size: 1.4em;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+
+.review-submit-button,
+.checkout-btn {
+	background-color: rgb(127,191,127);
+	color: #fff;
+}
+
+#loginModalBox2,
+#loginModalBox {
+	box-shadow: none;
+}
+
+#headerBox {
+	box-shadow: none;
+	background-color: rgba(64, 64, 64, .6);
+}
+
+#headerBox2 {
+	box-shadow: none;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #fff;
+	border-width: 10px;
+	background-color: rgba(64, 64, 64, .6);
+}
+
+/*====================================
+  Restaurant Page restaurantList Page
+=====================================*/
+.restaurant-list-panel {
+	background-color: #294949;
+	color: #fff;
+}
+
+.restaurant-list-panel p {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.select-restaurant {
+	background-color: #5a6f5d;
+	color: #fff;
+}
+
+.button:hover, 
+.button:focus, 
+.button.is-active {
+	color: #fff;
+	box-shadow: 3px 3px 5px #ccc;
+}
+
+.rating-font {
+	font-size: 1.6em;
+	text-align: center;
+}
+
+#ratingNumber {
+	margin-top: 1%;
+	margin-bottom: 1%;
+}

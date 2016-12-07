@@ -1,0 +1,32 @@
+{
+  "name": "Restaurant",
+  "homepage": "https://github.com/NoshSpot/Restaurant",
+  "authors": [
+    "Ryan Dowdy <rdowdy21@gmail.com>"
+  ],
+  "description": "Restaurant app for Nosh Spot",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./app/bower_components",
+    "test",
+    "tests"
+  ],
+  "overrides": {
+    "bulma": {
+      "main": [
+        "css/bulma.css"
+      ]
+    }
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-toastr": "^2.0.0",
+    "angular-ui-router": "^0.3.1",
+    "bulma": "^0.1.2",
+    "font-awesome": "^4.6.3"
+  }
+}

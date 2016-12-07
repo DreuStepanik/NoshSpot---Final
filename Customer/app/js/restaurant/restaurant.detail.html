@@ -1,0 +1,136 @@
+<nav class="nav">
+  <div class="nav-left">
+      <a id="navName" class="nav-item is-brand" href="#">
+              NoshSpot
+          </a>
+  </div>
+  <span class="nav-toggle">
+      <span></span>
+  <span></span>
+  <span></span>
+  </span>
+  <div class="nav-right nav-menu">
+      <a class="nav-item nav-link" ui-sref="restaurants.list({customerId: restaurantDetail.customerId})">Restaurant</a>
+      <a class="nav-item nav-link" ui-sref="orders({customerId: restaurantDetail.customerId})">Orders History</a>
+  </div>
+</nav>
+<div class="container">
+    <div class="box">
+        <div clas="panel">
+            <div class="panel-heading">
+                <p>{{restaurantDetail.menu.name}}</p>
+            </div>
+            <div class="panel-block">
+                <div class="columns">
+                    <div class="column">
+                        <!--MENU-->
+                        <div class="container">
+                            <div ng-repeat="menuGroup in restaurantDetail.menu.menuGroups">
+                                <h3 class="header menu-group-header">{{menuGroup.menuGroupTitle}}</h3>
+                                <table class="table menu-table">
+                                    <thead>
+                                        <tr>
+                                            <th><b>Name</b></th>
+                                            <th><b>Description</b></th>
+                                            <th><b>Price</b></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="item in menuGroup.menuItems">
+                                            <td>{{item.name}}</td>
+                                            <td>{{item.description}}</td>
+                                            <td>{{item.price}}</td>
+                                            <td>
+                                                <button class="button add-to-cart-btn" ng-click="restaurantDetail.addToCart(item)">Add To Cart <i class="icons fa fa-shopping-cart" aria-hidden="true"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        
+                            <!-- CART -->
+                            <!-- <div class="box checkout-box"> -->
+                                <div class="panel cart">
+                                    <div class="panel-heading">
+                                        <p>Cart</p>
+                                    </div>
+                                    <div class="panel-block">
+                                        <div class="columns">
+                                            <div class="column">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th><b>Items</b></th>
+                                                            <th><b>Price</b></th>
+                                                            <th width="1%"></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr ng-repeat="item in restaurantDetail.cart.items">
+                                                            <td>{{item.name}}</td>
+                                                            <td>{{item.price | currency}}</td>
+                                                            <td>
+                                                                <button class="button is-danger"ng-click="restaurantDetail.removeItem(item)">Remove <i class="icons fa fa-minus-circle" aria-hidden="true"></i></button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div>
+                                                    <p class="total-amt">Total: {{restaurantDetail.cart.cost() | currency: '$'}}</p>
+                                                </div>
+                                                <button class="button is-medium checkout-btn" stripe-checkout="restaurantDetail.doCheckout" data-key="pk_test_XE4OKSyJR5b8YXIX41XXEsN6" data-name="NoshSpot" data-description="NoshSpot Food Order" data-amount="{{restaurantDetail.cart.cost() * 100}}">Checkout</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                          <!--   </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>            
+            <!-- REVIEWS -->
+    <div class="container">
+        <div class="box reviews">
+            <div class="panel">
+                <div class="panel-heading">
+                    <p>Reviews:</p>
+                </div>
+                <div class="panel-block">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td><b>Description</b></td>
+                                <td><b>Rating</b></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="review in restaurantDetail.menu.reviews">
+                                <td>{{review.reviewDescription}}</td>
+                                <td class="rating-font">{{review.rating}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="container">
+                        <div class="panel write-reviews">
+                            <div class="panel-heading">
+                                <p>Write a review:</p>
+                            </div>
+                            <div class="panel-block">
+                                <textarea class="textarea" ng-model="restaurantDetail.newReviewDescription"></textarea>
+                                <div id="ratingNumber">
+                                    <h3>Enter a Number (Between 1 and 5):</h3>
+                                    <input type="number" ng-model="restaurantDetail.newReviewRating" />
+                                </div>
+                                <button class="button is-medium review-submit-button" ng-click="restaurantDetail.addReview()">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

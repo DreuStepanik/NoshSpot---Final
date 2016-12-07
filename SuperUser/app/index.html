@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "app" ui-router-styles>
+<head>
+  <meta charset="UTF-8">
+  <title>NoshSpot | SuperUser</title>
+
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+  <link rel="stylesheet" href="bower_components/bulma/css/bulma.css" />
+  <link rel="stylesheet" href="bower_components/toastr/toastr.css" />
+  <!-- endbower -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/login.css">
+  <!-- endinject -->
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-left">
+            <a id="navName" class="nav-item is-brand" href="#">NoshSpot</a>
+        </div>
+        <span class="nav-toggle">
+            <span></span>
+        <span></span>
+        <span></span>
+        </span>
+        <div class="nav-right nav-menu">
+            <a class="nav-item nav-link" ui-sref="restaurants.list">Restaurant</a>
+            <a class="nav-item nav-link" ui-sref="customers.list">Customer</a>
+        </div>
+    </nav>
+
+    <main>
+        <div ui-view></div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+              <p>
+                <strong>NoshSpot Creators:</strong> Dreu Stepanik, Michele Kempinsky, Ryan Dowdy, Herberto Basulto, Cole Logan, Jason Land, Reggie Sibbley, Christian Nagal, Vincent Duong
+              </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/toastr/toastr.js"></script>
+    <script src="bower_components/angular-ui-router-styles/ui-router-styles.js"></script>
+    <!-- endbower -->
+    <!-- inject:js -->
+    <script src="js/app.module.js"></script>
+    <script src="js/core/category.factory.js"></script>
+    <script src="js/core/crud.factory.js"></script>
+    <script src="js/core/customer.factory.js"></script>
+    <script src="js/core/menuGroup.factory.js"></script>
+    <script src="js/core/menuItem.factory.js"></script>
+    <script src="js/core/order.factory.js"></script>
+    <script src="js/core/orderItem.factory.js"></script>
+    <script src="js/core/payment.factory.js"></script>
+    <script src="js/core/restaurant.factory.js"></script>
+    <script src="js/core/review.factory.js"></script>
+    <script src="js/customers/customer.detail.controller.js"></script>
+    <script src="js/customers/customerList.Controller.js"></script>
+    <script src="js/menu/restaurant.menu.controller.js"></script>
+    <script src="js/login/login.controller.js"></script>
+    <script src="js/orders/restaurant.orders.controller.js"></script>
+    <script src="js/restaurants/list.controller.js"></script>
+    <script src="js/restaurants/restaurant.detail.controller.js"></script>
+    <script src="js/reviews/restaurant.reviews.controller.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<table class="table striped">
+    <thead>
+    	<tr>
+    		<th>Orders</th>
+            <th>Order Items</th>
+            <th>Order Total</th>
+    	</tr>
+    </thead>
+    <tbody>
+    <tr>
+        <tr ng-repeat="order in restaurantDetailOrders.details.orders" ng-hide="order.numItemsOrdered == 0">
+            <td>
+                {{order.customer.firstName}} {{order.customer.lastName}}
+            </td>
+            <td>
+                {{order.numItemsOrdered}}
+            </td>
+            <td>
+                {{ order.totalPrice | currency }}
+            </td>
+        </tr>
+
+    </tbody>
+</table>

@@ -1,0 +1,68 @@
+<nav class="nav">
+  <div class="nav-left">
+      <a id="navName" class="nav-item is-brand" href="#">
+              NoshSpot
+          </a>
+  </div>
+  <span class="nav-toggle">
+      <span></span>
+  <span></span>
+  <span></span>
+  </span>
+  <div class="nav-right nav-menu">
+      <a class="nav-item nav-link" ui-sref="restaurants.list({customerId: restaurantList.customerId})">Restaurant</a>
+      <a class="nav-item nav-link" ui-sref="orders({customerId: restaurantList.customerId})">Orders History</a>
+  </div>
+</nav>
+<!-- <section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title" ng-model="restaurantList">
+        Welcome back {{firstName}}!
+      </h1>
+      <h2 class="subtitle">
+      </h2>
+    </div>
+  </div>
+</section> -->
+<div class="container">
+    <div class="box">
+        <div class="panel restaurant-list-panel">
+            <div class="panel-heading">
+            	<p>Restaurants:</p>
+            </div>
+			<div class="panel-block">
+				<div class="columns">
+					<div class="column">
+						<table class="table is-striped">
+							<thead>
+								<tr>
+									<th>Restaurant:</th>
+									<th>Address:</th>
+									<th>Zipcode:</th>
+									<th>Telephone:</th>
+									<th>Email:</th>
+									<th>Website:</th>
+									<th>Description:</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="restaurant in restaurantList.allRestaurants">
+									<td>{{restaurant.name}}</td>
+									<td>{{restaurant.address}}</td>
+									<td>{{restaurant.zipCode}}</td>
+									<td>{{restaurant.telephone}}</td>
+									<td>{{restaurant.email}}</td>
+									<td>{{restaurant.webSite}}</td>
+									<td>{{restaurant.description}}</td>
+									<td><button class="button select-restaurant" ui-sref="restaurants.detail({restaurantId: restaurant.restaurantId, customerId: restaurantList.customerId})">Select</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,61 @@
+
+    <div class="container">
+       <div>
+       <input class="modal-input" id="modalTrigger" type="checkbox">
+            <div class="modal-overlay">
+                <div class="modal-wrap">
+                    <label class="modal-trigger-label" for="modalTrigger">&#10006;</label>
+                    <div class="container">
+                      <div class= "box order-display">
+                      <h2>
+                        <p ng-bind="restaurantOrders.orders.customer.firstName"></p>
+                        <p ng-bind="restaurantOrders.orders.customer.lastName"></p>
+                        </h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="x in restaurantOrders.orders.orderItems">
+                                    <td>{{x.menuItem.name}}</td>
+                                    <td>{{x.menuItem.price | currency}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>
+                        Total Price: 
+                        <span class="totalPriceDisplay" ng-bind="restaurantOrders.orders.totalPrice | currency"></span></h3>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="table striped">
+            <thead>
+            	<tr>
+            		<th>Orders</th>
+                    <th>Order Items</th>
+                    <th>Order Total</th>
+            	</tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="food in restaurantOrders.details.orders | orderBy:'-timeStamp'">
+                    <td>
+                        {{food.customer.firstName}} {{food.customer.lastName}}
+                    </td>
+                    <td>
+                        <button class="button modal-lanuch" ng-click="restaurantOrders.getOrderById(food.orderId, $index)">
+                            <label for="modalTrigger"> {{food.numItemsOrdered}}</label>
+                        </button>
+                    </td>
+                    <td>
+                        {{ food.totalPrice | currency}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+

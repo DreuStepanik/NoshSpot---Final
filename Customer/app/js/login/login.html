@@ -1,0 +1,296 @@
+<nav class="nav">
+        <div class="nav-left">
+            <a id="navName" class="nav-item is-brand" href="#">
+                    NoshSpot
+                </a>
+        </div>
+</nav>
+<section id="hero1" class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <div class="modal"> 
+          <header>
+            <div class="container" style="text-align: center">
+              <div class="box" id="headerBox">
+                <div class="box" id="headerBox2">
+                  <h1 id="headerText1">~ N O S H S P O T ~</h1>
+                </div>
+              </div>
+            </div>
+            <div style="text-align: center">
+              <button class="button is-medium modal-login-button">
+                <label for="modalTrigger"> Login<i class="icons fa fa-cutlery" aria-hidden="true"></i></label>
+              </button> 
+            </div>
+          </header>
+          <div>
+            <input class="modal-input" id="modalTrigger" type="checkbox">
+              <div class="modal-overlay">
+                <div class="modal-wrap">
+                  <label class="modal-trigger-label" for="modalTrigger">&#10006;</label>
+                    <div id="loginModalBox" class="box">
+                      <form ng-submit="login.loginCustomer()">
+                        <div class="control">
+                          <div class="select is-fullwidth">
+                            <select ng-model="login.selectedCustomer" ng-options="customer.customerId as customer.firstName for customer in login.customers">
+                             <option value="" disabled>Select a Customer...</option>
+                            </select>
+                          </div>
+                        </div>
+                        <p class="control has-icon">
+                        <!-- <label>Password</label> -->
+                          <input class="input" type="password" placeholder="Password" ng-model="login.loginInfo.password">
+                          <i class="fa fa-lock"></i>
+                        </p>
+                        <p class="control">
+                          <button type="submit" class="button is-info">Login</button>
+                        </p>
+                      </form>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      <div class="modal2">
+        <div style="text-align: center">
+          <button class="button is-medium modal-login-button2">
+            <label for="modalTrigger2"> Sign Up <i class="icons fa fa-user" aria-hidden="true"></i></label>
+          </button> 
+          <p class="sm-text">Not a member yet? Sign up for free!</p>
+        </div>
+        <div>
+            <input class="modal-input2" id="modalTrigger2" type="checkbox">
+              <div class="modal-overlay2">
+                <div class="modal-wrap2">
+                  <label class="modal-trigger-label2" for="modalTrigger2">&#10006;</label>
+                    <div id="loginModalBox2" class="box">
+                      <form  ng-submit="login.addNewCustomer(login.newCustomer)">
+                        <div class="columns">
+                          <div class="column is-half">
+                            <label class="label">Password</label>
+                            <p class="control">
+                              <input class="input" type="password" ng-model="login.password">
+                            </p>
+                          </div>
+                          <div class="column is-half">
+                            <label class="label">Confirm Password</label>
+                            <p class="control">
+                              <input class="input" type="password" ng-model="login.confirmPassword">
+                            </p>
+                          </div>
+                        </div>
+                        <div class="columns">
+                          <div class="column is-half">
+                            <label class="label">First Name</label>
+                            <p class="control">
+                              <input class="input" type="text" ng-model="login.newCustomer.firstName">
+                            </p>
+                          </div>
+                          <div class="column is-half">
+                            <label class="label">Last Name</label>
+                            <p class="control">
+                              <input class="input" type="text" ng-model="login.newCustomer.lastName">
+                            </p>
+                          </div>
+                        </div>
+                        <div class="columns">
+                          <div class="column is-half">
+                            <label class="label">Address</label>
+                            <p class="control">
+                              <input class="input" type="text" ng-model="login.newCustomer.address">
+                            </p>
+                          </div>
+                          <div class="column is-half">
+                            <label class="label">Zip Code</label>
+                            <p class="control">
+                              <input class="input" type="text" ng-model="login.newCustomer.zipCode">
+                            </p>
+                          </div>
+                        </div>
+                        <div class="columns">
+                          <div class="column is-half">
+                            <label class="label">Telephone</label>
+                            <p class="control">
+                              <input class="input" type="text" ng-model="login.newCustomer.telephone">
+                            </p>
+                          </div>
+                          <div class="column is-half">
+                            <label class="label">Email</label>
+                            <p class="control">
+                              <input class="input" type="text" ng-model="login.newCustomer.email">
+                            </p>
+                          </div>
+                        </div>
+                          <div>
+                            <p class="control">
+                              <button class="button is-info" type="submit">Submit</button>
+                            </p>
+                          </div>
+                      </form>
+                    </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
+    <section id="hero2" class="hero is-info is-medium">
+      <div class="container">
+        <div class="hero-body">
+        <p class="p-tag-left">The Most Convenient Food Service..Ever.</p>
+          <div class="columns">
+            <div class="column is-4">
+              <div class="box">
+                <div>
+                  <img src="../img/personTexting.jpg">
+                </div>
+              </div>
+              <p class="p-tag">Easy Ordering.</p>
+            </div>
+            <div class="column is-4">
+              <div class="box">
+                <div>
+                  <img src="../img/goodQuality.jpg">
+                </div>
+              </div>
+              <p class="p-tag">High Quality Food.</p>
+            </div>
+            <div class="column is-4">
+              <div class="box">
+                <div>
+                  <img src="../img/fooddelivery.jpg">
+                </div>
+              </div>
+              <p class="p-tag">Fast Delivery.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="hero3" class="hero is-large">
+      <div class="hero-body">
+        <div class="container">
+          <h1 style="color: #fff; font-size: 3em">
+            Simplicity.
+          </h1>
+        </div>
+      </div>
+    </section>
+    <section id="hero4" class="hero is-dark is-medium">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-3">
+              <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-32x32">
+                      <img src="http://placehold.it/64x64" alt="Image">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="is-5">Reggie Sibley</p>
+                    <small><p class="is-6">@RegGetsHoes</p></small>
+                  </div>
+                </div>
+                <div class="content">
+                  I like it. Easy to use. Easy to pay. Hell yeah! A +
+                  <br>
+                  <small>11:09 PM - 16 Sep 2016</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-32x32">
+                      <img src="http://placehold.it/64x64" alt="Image">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="is-5">Jeff Winkler</p>
+                    <small><p class="is-6">@JeffWinkler</p></small>
+                  </div>
+                </div>
+                <div class="content">
+                  All I can say is, Wow! Awesome food. Fast Delivery. Easy Process.
+                  Will do business again!
+                  <br>
+                  <small>09:09 PM - 15 Sep 2016</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-32x32">
+                      <img src="http://placehold.it/64x64" alt="Image">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="is-5">Cole Logan</p>
+                    <small><p class="is-6">@ColeSnapYoFingaz</p></small>
+                  </div>
+                </div>
+                <div class="content">
+                  How can I invest? It goes hard.
+                  <br>
+                  <small>04:09 PM - 17 Sep 2016</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-32x32">
+                      <img src="http://placehold.it/64x64" alt="Image">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="is-5">Cameron Wilbey</p>
+                    <small><p class="is-6">@CamWilbey</p></small>
+                  </div>
+                </div>
+                <div class="content">
+                  This app is so damn legit, it brings tears to my eyes.
+                  <br>
+                  <small>12:09 PM - 15 Sep 2016</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- bulma sign-in sheet example -->
+<!-- <p class="control has-icon">
+  <input class="input" type="email" placeholder="Email">
+  <i class="fa fa-envelope"></i>
+</p>
+<p class="control has-icon">
+  <input class="input" type="password" placeholder="Password">
+  <i class="fa fa-lock"></i>
+</p>
+<p class="control">
+  <button class="button is-success">
+    Login
+  </button>
+</p> -->

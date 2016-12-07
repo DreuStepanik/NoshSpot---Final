@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoshSpot.API", "NoshSpot.API\NoshSpot.API.csproj", "{6C1E16FD-06D1-4A82-A575-F75AC0F3AAA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoshSpot.API.Tests", "NoshSpot.API.Tests\NoshSpot.API.Tests.csproj", "{D456F457-F644-4027-99C8-B1BDD2C1779D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C1E16FD-06D1-4A82-A575-F75AC0F3AAA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C1E16FD-06D1-4A82-A575-F75AC0F3AAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C1E16FD-06D1-4A82-A575-F75AC0F3AAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C1E16FD-06D1-4A82-A575-F75AC0F3AAA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D456F457-F644-4027-99C8-B1BDD2C1779D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D456F457-F644-4027-99C8-B1BDD2C1779D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D456F457-F644-4027-99C8-B1BDD2C1779D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D456F457-F644-4027-99C8-B1BDD2C1779D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,40 @@
+<!-- will require customer controller -->
+<!-- ng-model='allCustomers' will hold a list of all the customers -->
+<div id="customer-list-body">
+    <div class="container">
+        <div class="box">
+            <div class="panel list-panel">
+                <div class="panel-heading">
+                    <p>Customers:</p>
+                </div>
+                <div class="panel-block">
+                    <div class="columns">
+                        <table class="column" id="customers-table">
+                            <thead>
+                                <tr>
+                                    <th>Customer: </th>
+                                    <th>Address: </th>
+                                    <th>Telephone: </th>
+                                    <th>Email: </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="customer in customersList.allCustomers">
+                                    <td>{{customer.firstName}} {{customer.lastName}}</td>
+                                    <td>{{customer.address}}, {{customer.zipCode}}</td>
+                                    <td>{{customer.telephone}}</td>
+                                    <td>{{customer.email}}</td>
+                                    <td class="is-icon">
+                                        <button class="button view-cust-detail" ui-sref="customers.detail({customerId: customer.customerId})">
+                                            View <i class="icons fa fa-search"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

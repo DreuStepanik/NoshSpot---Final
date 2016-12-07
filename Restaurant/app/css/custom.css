@@ -1,0 +1,363 @@
+/****************************************************
+			Media Queries
+****************************************************/
+
+/*@media only screen and (max-width: 500px) {
+   #restaurantLoginBody {
+	background-image: url('../img/restaurantLogin.jpg');
+	background-repeat: repeat-y;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	}
+}*/
+
+
+/*====================================
+  		Modal Window styles
+=====================================*/
+.modal {
+  background: transparent;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  display: inline;
+}
+
+.modal-login-button {
+	margin-top: 2%;
+	box-shadow: 0px 5px 8px #000;
+	background-color: #697f7f;
+	color: #fff;
+	border: none;
+}
+
+@media (min-width: 40px) {
+  .modal {
+    padding: 1.5em;
+  }
+}
+.modal-overlay {
+  background: rgba(0, 0, 0, .5);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-shadow: none;
+  top: 0;
+  z-index: 600;
+}
+.modal-wrap {
+  padding: 1em 0;
+  position: relative;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 90%;
+}
+@media (min-width: 40px) {
+  .modal-wrap {
+    padding: 1.75em;
+  }
+}
+@media (min-height: 40px) {
+  .modal-wrap {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -80%);
+  }
+}
+
+.modal-trigger-label {
+  background: red;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  height: 1.2em;
+  line-height: 1.2;
+  position: absolute;
+  right: .5em;
+  top: .5em;
+  width: 1.2em;
+}
+.modal-wrap h2 {
+  color: #FFD300;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+.modal-wrap p {
+  color: #FFD300;
+  text-align: justify;
+}
+.modal-input:focus ~ .modal-trigger-label {
+  transform: scale(0.97);
+}
+
+/*====================================
+  		Modal action styles
+=====================================*/
+
+.modal-input {
+  position: absolute;
+  top: -1000px;
+}
+
+.modal-overlay {
+  opacity: 0;
+  z-index: -100;
+  transform: scale(0.5);
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.modal-input:checked ~ .modal-overlay {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+}
+
+/****************************************************
+				NavBar && Footer Default
+****************************************************/
+.nav{
+	background-color: rgba(90, 111, 93, .8);
+	margin-bottom: 15px;
+	font-family: Raleway;
+}
+
+#navName {
+	color: #fff;
+	font-size: 2.6em;
+	font-family: lobster;
+}
+
+.nav a {
+	font-size: 1.4em;
+	color: #fff;
+}
+
+
+/****************************************************
+				Body Default
+****************************************************/
+body {
+	font-family: Raleway;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	background-color: #f1f5f0;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.icons {
+	padding-left: 5px;
+	margin-top: 3px;
+}
+/****************************************************
+				Footer Default
+****************************************************/
+.footer {
+	font-family: Raleway;
+	height: 40px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, .6);
+	z-index: 1;
+	box-shadow: 10px 0px 10px black;
+	margin-top: 4%;
+}
+
+.footer p {
+	color: #000;
+}
+
+
+/*====================================
+  		Restaurant Login Page
+=====================================*/
+#restaurantLoginBody {
+	background-image: url('../img/restaurantLogin.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+
+.lowerHeader {
+	margin-top: 12%;
+}
+
+#text1 {
+	font-size: 2.5em;
+	font-style: italic;
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 0px 5px 8px #000;
+}
+
+#text2 {
+	font-size: 8em;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 0px 5px 8px #000;
+}
+
+.box,
+.login-box {
+	box-shadow: -3px 8px 20px #000;
+}
+
+/****************************************************
+		Restaurant User - Restaurant Detail
+****************************************************/
+#restaurantDetailBody {
+	background-size: 100% 100%;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	position: relative;
+}
+
+#restaurantDetailDescription {
+	width: 100%;
+}
+
+#restaurantDetailSaveBtn{
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+.restaurant-save-details {
+	background-color: #5a6f5d;
+	color: #fff;
+}
+
+#restaurantPanelBody {
+	width: 98%;
+	margin-left: 1%;
+}
+
+#restaurantPanelBody label {
+	font-size: 1.4em;
+	padding-bottom:: 10px;
+}
+
+#restaurantDetailTopColumns {
+	padding-top: 10px;
+}
+
+.restaurant-detail-panel,
+.restaurant-detail-panel2 {
+	background-color: #fff;
+	box-shadow: 0px 5px 10px #ccc;
+}
+
+.restaurant-detail-panel2 .panel-heading,
+.restaurant-detail-panel .panel-heading {
+	background-color: #294949;
+	color: #fff;
+}
+
+.restaurant-detail-panel2 .panel-heading p,
+.restaurant-detail-panel .panel-heading p {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.box {
+	box-shadow: 0px 12px 13px #ccc;
+	margin-top: 4%;
+}
+
+.button {
+	align-items: right; 
+}
+
+.menu-group-header {
+	font-size: 1.3em;
+	font-weight: bold;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	color: #294949;
+	border-bottom: 1px solid #ccc;
+}
+
+.menu-table td{
+	max-width: 15px;
+}
+
+.menu-table th {
+	background-color: #F8F8F8;
+	color: #ccc;
+}
+.delete-menu-item-btn {
+	background-color: red;
+	color: #fff;
+}
+
+.add-menu-item-btn {
+	color: #fff;
+	background-color: #697f7f;
+	border: none;
+}
+
+.button:hover,
+.button:focus,
+.button.is-active {
+	color: #fff; 
+	box-shadow: 3px 3px 5px #ccc;
+}
+
+tbody{
+	padding: 10px;
+}
+
+/****************************************************
+		Input Default
+****************************************************/
+
+.input:active, .textarea:active, .input:focus, .textarea:focus, .input.is-active, .is-active.textarea {
+    border-color: #6a3b3b ;
+    outline: none;
+}
+
+.tabs li.is-active a {
+    color: green;
+    font-size: 1.2em;
+}
+
+input {
+    box-shadow: 0px 4px 4px #ccc; 
+}
+
+/****************************************************
+				Orders Default && MODAL
+****************************************************/
+
+.modal-lanuch {
+	color: #fff;
+	background-color: #EBAA32;
+	font-weight: bold;
+	border-radius: 90%;
+}
+
+.order-display {
+	box-shadow: -3px 8px 20px #000;
+}
+
+.totalPriceDisplay {
+	color: green;
+	font-weight: bold;
+}
+
+.remove-mg-btn {
+	float: right; 
+}

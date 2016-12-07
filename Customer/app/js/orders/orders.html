@@ -1,0 +1,50 @@
+<nav class="nav">
+  <div class="nav-left">
+      <a id="navName" class="nav-item is-brand" href="#">
+              NoshSpot
+          </a>
+  </div>
+  <span class="nav-toggle">
+      <span></span>
+  <span></span>
+  <span></span>
+  </span>
+  <div class="nav-right nav-menu">
+      <a class="nav-item nav-link" ui-sref="restaurants.list({customerId: orders.customerId})">Restaurant</a>
+      <a class="nav-item nav-link" ui-sref="orders({customerId: orders.customerId})">Orders History</a>
+  </div>
+</nav>
+<div class="container">
+	<div class="columns">
+		<div class="column">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Restaurants</th>
+						<th>Order</th>
+						<th>Paid</th>
+						<th width="1%"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="order in orders.details.orders">
+						<td>{{order.timeStamp | date: 'short'}}</td>
+						<td>{{order.restaurant.name}}</td>
+						<td>
+							<ul>
+								<li ng-repeat="items in order.orderItems">
+									{{items.menuItem.name}} - {{items.menuItem.price | currency: '$'}}
+								</li>
+							</ul>
+						</td>
+						<td>{{order.orderTotal | currency: '$'}}</td>
+						<td><button class="button"
+								  ng-click="orders.doCheckout(order)" ng-disabled="order.restaurant.restaurantId == null || order.orderItems.length == 0">
+					              Buy</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

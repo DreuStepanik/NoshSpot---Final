@@ -1,0 +1,29 @@
+{
+  "name": "customer",
+  "version": "1.0.0",
+  "description": "- AngularJS\r - MSSQL\r - Entity Framework\r - C# Web Api\r - Bulma.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoshSpot/Customer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoshSpot/Customer/issues"
+  },
+  "homepage": "https://github.com/NoshSpot/Customer#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-connect": "^5.0.0",
+    "gulp-inject": "^4.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-open": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "wiredep": "^4.0.0"
+  }
+}

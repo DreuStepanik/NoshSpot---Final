@@ -1,0 +1,129 @@
+<!-- Customer Detail State -->
+<div class="container">
+    <div class="columns">
+        <div class="column is-half">
+            <div class="box">
+                <div class="panel customer-detail-panel">
+                    <div class="panel-heading">
+                        <p>Customer Details</p>
+                    </div>
+                        <!-- Customer's Detail -->
+                    <div class="panel-block">
+                        <div class="columns">
+                            <div class="column is-4">
+                                <strong class="is-pulled-right">Name</strong>
+                            </div>
+                            <div class="column is-1"></div>
+                            <div class="column">
+                                <p class="is-pulled-left">{{customerDetail.customer.firstName}} {{customerDetail.customer.lastName}}</p>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-4">
+                                <strong class="is-pulled-right">Address</strong>
+                            </div>
+                            <div class="column is-1"></div>
+                            <div class="column">
+                                <p>{{customerDetail.customer.address}}</p>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-4">
+                                <strong class="is-pulled-right">ZipCode</strong>
+                            </div>
+                            <div class="column is-1"></div>
+                            <div class="column">
+                                <p>{{customerDetail.customer.zipCode}}</p>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-4">
+                                <strong class="is-pulled-right">Telephone</strong>
+                            </div>
+                            <div class="column is-1"></div>
+                            <div class="column">
+                                <p>{{customerDetail.customer.telephone}}</p>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-4">
+                                <strong class="is-pulled-right">Email</strong>
+                            </div>
+                            <div class="column is-1"></div>
+                            <div class="column">
+                                <p>{{customerDetail.customer.email}}</p>
+                            </div>
+                        </div>
+                        <div id="delete-user">
+                            <button class="button is-danger" ng-click="customerDetail.deleteCustomer(customerDetail.customer.customerId)">Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+	<div class="box">
+		<!-- Tabs -->
+        <div class="customer-detail-panel2">
+    		<div class="tabs is-boxed">
+    			<ul>
+    				<li ng-class="{'is-active': customerDetail.reviewMode}" ng-click="customerDetail.reviewMode = true">
+    					<a>Reviews</a>
+    				</li>
+    				<li ng-class="{'is-active': !customerDetail.reviewMode}" ng-click="customerDetail.reviewMode = false"> 
+    					<a>Orders</a>
+    				</li>
+    			</ul>
+    		</div>
+    		<!-- Reviews -->
+            <div class="panel-body">
+        		<div ng-show="customerDetail.reviewMode">
+                    <table class="table is-striped">
+                        <thead>
+                            <tr>
+                                <th>Restaurant</th>
+                                <th>Rating</th>
+                                <th>Review</th>
+                                <th width="1%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="review in customerDetail.customer.reviews">
+                                <td><strong>{{review.restaurant.name}}</strong></td>
+                                <td>{{review.rating}}</td>
+                                <td>{{review.reviewDescription}}</td>
+                                <td><button class="button is-danger" ng-click="customerDetail.removeReview(review)">Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+        		</div>
+
+        		<!-- Orders History -->
+        		<div ng-hide="customerDetail.reviewMode">
+        			<table class="table is-striped">
+        				<thead>
+        					<tr>
+        						<th>Time</th>
+        						<th>Restaurant</th>
+        						<th>Items Ordered</th>
+        						<th>Total</th>
+        					</tr>
+        				</thead>
+        				<tbody>
+        					<tr ng-repeat="order in customerDetail.customer.orders">
+        						<td>{{order.timeStamp | date: 'short'}}</td>
+        						<td>{{order.restaurant.name}}</td>
+        						<td>{{order.numItemsOrdered}}</td>
+                                <td>{{order.orderTotal | currency}}</td>
+        					</tr>
+        				</tbody>
+        			</table>
+        		</div>
+            </div>
+    	</div>
+    </div>
+</div>

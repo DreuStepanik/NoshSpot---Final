@@ -1,0 +1,84 @@
+<div id="restaurantDetailBody">
+    <div class="container">
+        <div class="box">
+            <div class="panel restaurant-detail-panel">
+                <div class="panel-heading">
+                    <p>Restaurant Details</p>
+                </div>
+                <div class="panel-body" id="restaurantPanelBody">
+                    <div class="columns" id="restaurantDetailTopColumns">
+                        <div class="column is-half">
+                            <label class="label">Restaurant Name:</label>
+                            <p class="control">
+                                <input class="input" type="text" placeholder="Text input" ng-model="restaurantDetail.restaurants.name">
+                            </p>
+                        </div>
+                        <div class="column">
+                            <label class="label">Address:</label>
+                            <p class="control">
+                                <input class="input" type="text" placeholder="Text input" ng-model="restaurantDetail.restaurants.address">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-half">
+                            <label class="label">Zip Code:</label>
+                            <p class="control">
+                                <input class="input" type="text" placeholder="Text input" ng-model="restaurantDetail.restaurants.zipCode">
+                            </p>
+                        </div>
+                        <div class="column">
+                            <label class="label">Telephone:</label>
+                            <p class="control">
+                                <input class="input" type="text" placeholder="Text input" ng-model="restaurantDetail.restaurants.telephone">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-half">
+                            <label class="label">Email Address:</label>
+                            <p class="control">
+                                <input class="input" type="text" placeholder="Text input" ng-model="restaurantDetail.restaurants.email">
+                            </p>
+                        </div>
+                        <div class="column">
+                            <label class="label">Website Url:</label>
+                            <p class="control">
+                                <input class="input" type="text" placeholder="Text input" ng-model="restaurantDetail.restaurants.webSite">
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                       <label class="label">Description:</label>
+                           <textarea id="restaurantDetailDescription" type="form" ng-model="restaurantDetail.restaurants.description"></textarea>
+                    </div>
+                    <div id="restaurantDetailSaveBtn">
+                       <button ng-click="restaurantDetail.save(restaurants, restaurantId)" class="button is-medium restaurant-save-details">Save <i class="icons fa fa-check"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="box">
+            <div class="restaurant-detail-panel2">
+                <div>
+                    <div class="tabs is-boxed">
+                        <ul>
+                            <li ui-sref-active="is-active" ui-sref="restaurant.detail.tabs.menu({restaurantId: restaurantDetail.restaurantId})"><a>Menu:</a></li>
+                            <li ui-sref-active="is-active" ui-sref="restaurant.detail.tabs.orders({restaurantId: restaurantDetail.restaurantId})"><a>Orders:</a></li>
+                            <li ui-sref-active="is-active" ui-sref="restaurant.detail.tabs.reviews({restaurantId: restaurantDetail.restaurantId})"><a>Reviews:</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel-block">
+                    <div ui-view>
+                        <div class="modal">
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

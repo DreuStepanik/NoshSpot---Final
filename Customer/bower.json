@@ -1,0 +1,33 @@
+{
+  "name": "customer",
+  "description": "customer",
+  "main": "gulpfile.js",
+  "authors": [
+    "Jason Land <wishinghand@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/NoshSpot/Customer",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./app/bower_components",
+    "test",
+    "tests"
+  ],
+  "overrides": {
+    "bulma": {
+      "main": [
+        "css/bulma.css"
+      ]
+    }
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-toastr": "^2.0.0",
+    "angular-ui-router": "^0.3.1",
+    "bulma": "^0.1.2",
+    "font-awesome": "^4.6.3",
+    "angular-stripe-checkout": "^5.1.0"
+  }
+}

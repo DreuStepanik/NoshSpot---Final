@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NoshSpot | Restaurant</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="bower_components/bulma/css/bulma.css" />
+    <!-- endbower -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- endinject -->
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-left">
+            <a id="navName" class="nav-item is-brand" href="#">
+                    NoshSpot
+                </a>
+        </div>
+        <span class="nav-toggle">
+            <span></span>
+        <span></span>
+        <span></span>
+        </span>
+    </nav>
+
+    <main>
+        <div ui-view></div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+              <p>
+                <strong>NoshSpot Creators:</strong> Dreu Stepanik, Michele Kempinsky, Ryan Dowdy, Herberto Basulto, Cole Logan, Jason Land, Reggie Sibley, Christian Nagal, Vincent Duong
+              </p>
+            </div>
+        </div>
+    </footer>
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+    <!-- inject:js -->
+    <script src="js/app.module.js"></script>
+    <script src="js/core/category.factory.js"></script>
+    <script src="js/core/crud.factory.js"></script>
+    <script src="js/core/customer.factory.js"></script>
+    <script src="js/core/menuGroup.factory.js"></script>
+    <script src="js/core/menuItem.factory.js"></script>
+    <script src="js/core/order.factory.js"></script>
+    <script src="js/core/orderItem.factory.js"></script>
+    <script src="js/core/payment.factory.js"></script>
+    <script src="js/core/restaurant.factory.js"></script>
+    <script src="js/core/review.factory.js"></script>
+    <script src="js/details/details.controller.js"></script>
+    <script src="js/login/login.controller.js"></script>
+    <script src="js/menu/menu.controller.js"></script>
+    <script src="js/orders/orders.controller.js"></script>
+    <script src="js/reviews/reviews.controller.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>
